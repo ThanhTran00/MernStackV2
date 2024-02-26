@@ -1,6 +1,6 @@
 import mongodb from "mongodb"
-// const ObjectId =  mongodb.ObjectID
-const {ObjectId} =  require("bson")
+const ObjectId = mongodb.ObjectID
+
 let reviews
 
 export default class ReviewsDAO {
@@ -19,7 +19,7 @@ export default class ReviewsDAO {
     try {
       const reviewDoc = { name: user.name,
           user_id: user._id,
-          date: date, 
+          date: date,
           text: review,
           restaurant_id: ObjectId(restaurantId), }
 
